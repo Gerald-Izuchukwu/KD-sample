@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
+require('dotenv').config()
 
-const mongo_URI = 'mongodb://localhost:27017/kid-vac'
+const mongo_URI = process.env.mongo_URI || 'mongodb://localhost:27017/KDVac_Sample'
 
 const connectionDB = async () => {
     try {

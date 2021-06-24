@@ -1,3 +1,7 @@
 create server
 create mvc
 install dependecies
+require dependecies
+start server
+create database
+create model

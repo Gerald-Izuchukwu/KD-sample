@@ -1,11 +1,22 @@
 const express = require('express')
+const dataBase = require('./database/db')
+const userRoutes = require('.//routes/userRoute')
+// const vaccineRoutes = require('../routes/vaccine')
+require('dotenv').config()
+const PORT = process.env.PORT || 4001
 
+// calling the dataBase
+dataBase()
+
+// initializing express
 const app = express()
 
 // middleware to recognize the incoming Request Object as a JSON Object
 app.use(express.json())
 
-const PORT = process.env.PORT || 4001
+
+app.use('/user', userRoutes)
+// app.use('/vaccine', vaccineRoutes)
 
 
 /* this code would run if something goes wrong
