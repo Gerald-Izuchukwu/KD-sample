@@ -1,3 +1,5 @@
+// this code is not supposed to be here
+
 const userSchema = ({
     username: {
         type: String,
